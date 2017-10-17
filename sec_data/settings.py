@@ -9,7 +9,7 @@ LOCAL_URL = 'http://127.0.0.1:8000'
 PROD_URL = os.getenv('PROD_URL')
 API_BASE_URL = LOCAL_URL if os.getenv('LOCAL') else PROD_URL
 
-MYSQL_ND_API = ''.join([API_BASE_URL, '/sec/submit_form4/'])
+MYSQL_ND_API = ''.join([API_BASE_URL, '/sec/nonderivative/'])
 NEW_FEED_URL = ''.join([API_BASE_URL, '/sec/nonderivative/newfeed/'])
 ACCESSION_NUMS_ENDPOINT = ''.join([API_BASE_URL, '/sec/accessionnums/'])
 

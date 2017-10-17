@@ -65,7 +65,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'eldorado_webapp.urls'
+ROOT_URLCONF = 'sec_api.urls'
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
     'localhost:8000',
@@ -88,7 +88,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'eldorado_webapp.wsgi.application'
+WSGI_APPLICATION = 'sec_api.wsgi.application'
 
 
 # Database
@@ -97,7 +97,7 @@ if os.getenv('LOCAL'):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'ElDorado',
+            'NAME': os.getenv('MYSQL_DATABASE'),
             'HOST': os.getenv('MYSQL_HOST'),
             'PORT': os.getenv('MYSQL_PORT'),
             'USER': os.getenv('MYSQL_USER'),

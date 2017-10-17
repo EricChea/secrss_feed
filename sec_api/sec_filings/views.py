@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.core.serializers.json import DjangoJSONEncoder
 from django.views.decorators.csrf import csrf_exempt
 
-from eldorado_webapp import asgi
+from sec_api import asgi
 from sec_filings.models import NonDerivative, Owner, Company
 
 from collections import defaultdict
