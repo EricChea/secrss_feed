@@ -73,7 +73,7 @@ class ETL(object):
         self.entry['issuer'].update(xmlparser.issuer_dscr)
         self.entry['owner'].update(xmlparser.owner_dscr)
         self.entry['nonderivatives'] = xmlparser.nds_transacts
-        self.entry['derivatives'] = xmlparser.derivs_transacts
+        #self.entry['derivatives'] = xmlparser.derivs_transacts
 
         return
 

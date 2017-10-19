@@ -113,14 +113,14 @@ class InsiderXMLParser(IssuerOwnerXMLParser):
         args = [
             table_node, DTRANSACT_NODE, DXML, DNXML, DBINARY, DUNSANITARY
         ]
-        self.derivs_transacts = self.get_transacts(*args) if table_node else []
+        #self.derivs_transacts = self.get_transacts(*args) if table_node else []
 
         args = [
             table_node, DHOLDING_NODE, DXML, DNXML, DBINARY, DUNSANITARY
         ]
-        self.derivs_transacts.extend(
-            self.get_transacts(*args) if table_node else []
-        )
+        #self.derivs_transacts.extend(
+        #    self.get_transacts(*args) if table_node else []
+        #)
 
 
     def get_transacts(self, *args):
