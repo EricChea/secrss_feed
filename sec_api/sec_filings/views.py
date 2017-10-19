@@ -169,7 +169,7 @@ def nonderivative(request):
             owner_sharesownedfollowingtransaction=\
                 datum['transaction_sharesownedfollowingtransaction'],
             code=datum['transaction_code'],
-            formtype=datum['transaction_formtype'],
+            formtype=datum['form_type'],
             isequityswap=datum['isequityswap'],
             shares=datum['transaction_shares'],
             ownershipnature=datum['transaction_ownershiptype'],
