@@ -22,6 +22,9 @@ export default class Filing extends Component
     this.refresh = this.refresh.bind(this);
     this.handleData = this.handleData.bind(this);
 
+    // When connected the django channel sends message that initates the refresh
+    this.ws.onmessage = evt => (this.handleData(evt.data));
+
   }
 
 
@@ -74,9 +77,8 @@ export default class Filing extends Component
   };
 
 
-  componentWillMount() {
-    // When connected the django channel sends message that initates the refresh
-    this.ws.onmessage = evt => (this.handleData(evt.data));
+  componentWillUnmount() {
+    this.ws.close()
   };
 
 
