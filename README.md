@@ -3,4 +3,4 @@ This is the code used for a tutorial on creating an application using React and 
 
 [tutorial][tutorial_link]
 
-[tutorial_link]: http://www.ericchea.com/blog/
+[tutorial_link]: http://ericchea.github.io/
